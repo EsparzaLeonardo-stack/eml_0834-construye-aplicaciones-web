@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mes Patrio | Inicio</title>
+<style>
+  :root {
+    --verde: #0f6f4f;
+    --verde-osc: #0a4f38;
+    --rojo: #e31b23;
+    --crema: #f4f1ea;
+    --blanco: #ffffff;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: system-ui, sans-serif;
+    background: var(--crema);
+    color: #1a1a1a;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .wrap { max-width: 1000px; margin: 0 auto; padding: 20px; flex: 1; width: 100%; }
+  nav {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: var(--blanco);
+    padding: 10px;
+    border-radius: 50px;
+    margin-bottom: 25px;
+  }
+  nav a {
+    color: var(--verde-osc);
+    border: 2px solid var(--verde);
+    padding: 6px 14px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+  }
+  nav a.active, nav a:hover { background: var(--verde); color: var(--blanco); }
+  .card {
+    background: var(--blanco);
+    border-radius: 24px;
+    padding: 30px 20px;
+    text-align: center;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+  }
+  .sub { color: var(--rojo); font-weight: 900; letter-spacing: 2px; }
+  h1 { color: var(--verde); font-size: clamp(3rem, 8vw, 5.5rem); font-weight: 900; margin: 5px 0 15px; }
+  .img-box { max-width: 650px; margin: 0 auto 20px; border-radius: 20px; overflow: hidden; }
+  .img-box img { width: 100%; height: 300px; object-fit: cover; display: block; }
+  .desc {
+    background: var(--verde);
+    color: var(--blanco);
+    padding: 20px;
+    border-radius: 16px;
+    max-width: 650px;
+    margin: 0 auto;
+    font-weight: 600;
+  }
+  footer { background: var(--verde-osc); color: var(--blanco); text-align: center; padding: 15px; font-weight: 700; margin-top: auto; }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <nav>
+    <a href="01-inicio.html" class="active">Inicio</a>
+    <a href="02-introduccion.html">Introducción</a>
+    <a href="03-fechas.html">Fechas</a>
+    <a href="04-datos.html">Datos Curiosos</a>
+    <a href="05-mitos.html">Mitos</a>
+    <a href="06-personajes.html">Personajes</a>
+    <a href="07-ninos-heroes.html">Niños Héroes</a>
+  </nav>
+
+  <div class="card">
+    <div class="sub">SEPTIEMBRE MES PATRIO</div>
+    <h1>MÉXICO</h1>
+    <div class="img-box">
+      <img src="https://images.unsplash.com/photo-1518638150340-f706e86654de?auto=format&fit=crop&w=1000&q=80" alt="Chichén Itzá">
+    </div>
+    <div class="desc">
+      Mexico y sus fiestas patrias.
+    </div>
+  </div>
+</div>
+
+<footer>Esparza Martinez Leonardo. 0834. 5-J</footer>
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mes Patrio | Fechas</title>
+<style>
+  :root {
+    --verde: #0f6f4f;
+    --verde-osc: #0a4f38;
+    --rojo: #e31b23;
+    --blanco: #ffffff;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: system-ui, sans-serif;
+    background: var(--verde);
+    color: var(--blanco);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .wrap { max-width: 1000px; margin: 0 auto; padding: 20px; flex: 1; width: 100%; }
+  nav {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: var(--blanco);
+    padding: 10px;
+    border-radius: 50px;
+    margin-bottom: 25px;
+  }
+  nav a {
+    color: var(--verde-osc);
+    border: 2px solid var(--verde);
+    padding: 6px 14px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+  }
+  nav a.active, nav a:hover { background: var(--verde); color: var(--blanco); }
+  h1 { text-align: center; font-size: clamp(2rem, 5vw, 3rem); font-weight: 900; margin-bottom: 20px; }
+  .hero-img { width: 100%; height: 220px; object-fit: cover; border-radius: 20px; margin-bottom: 20px; display: block; }
+  .table-box { background: var(--blanco); color: #1a1a1a; border-radius: 20px; padding: 20px; overflow-x: auto; }
+  table { width: 100%; border-collapse: collapse; }
+  th, td { padding: 14px; text-align: left; border-bottom: 1px solid #ddd; }
+  th { background: var(--verde); color: var(--blanco); font-weight: 800; text-transform: uppercase; }
+  th:first-child { border-radius: 10px 0 0 10px; }
+  th:last-child { border-radius: 0 10px 10px 0; }
+  td strong { color: var(--rojo); text-transform: uppercase; }
+  footer { background: var(--verde-osc); text-align: center; padding: 15px; font-weight: 700; margin-top: auto; }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <nav>
+    <a href="01-inicio.html">Inicio</a>
+    <a href="02-introduccion.html">Introducción</a>
+    <a href="03-fechas.html" class="active">Fechas</a>
+    <a href="04-datos.html">Datos Curiosos</a>
+    <a href="05-mitos.html">Mitos</a>
+    <a href="06-personajes.html">Personajes</a>
+    <a href="07-ninos-heroes.html">Niños Héroes</a>
+  </nav>
+
+  <h1>FECHAS IMPORTANTES</h1>
+
+  <img src="https://images.unsplash.com/photo-1585464231875-d9ef1f5ad396?auto=format&fit=crop&w=1000&q=80" alt="Bandera de México" class="hero-img">
+
+  <div class="table-box">
+    <table>
+      <thead>
+        <tr>
+          <th>Acontecimiento</th>
+          <th>Fecha</th>
+          <th>¿Qué ocurrió?</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td><strong>Grito de Dolores</strong></td>
+          <td>15 de Septiembre de 1810</td>
+          <td>El Grito de Independencia conmemora el inicio de la guerra de Independencia de México ocurrido en la madrugada del 16 de septiembre de 1810.</td>
+        </tr>
+        <tr>
+          <td><strong>Inicio de la Independencia</strong></td>
+          <td>16 de Septiembre de 1810</td>
+          <td>El 16 de septiembre se conmemora el Grito de Independencia y el inicio de la lucha armada que liberó a México del dominio español.</td>
+        </tr>
+        <tr>
+          <td><strong>Niños Héroes</strong></td>
+          <td>13 de Septiembre de 1847</td>
+          <td>Los Niños Héroes fueron seis cadetes del Colegio Militar que murieron el 13 de septiembre de 1847 durante la Batalla de Chapultepec, en la intervención estadounidense en México.</td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<footer>Esparza Martinez Leonardo. 0834. 5-J</footer>
+
+</body>
+</html>
