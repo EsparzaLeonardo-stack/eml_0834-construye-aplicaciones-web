@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mes Patrio | Personajes</title>
+<style>
+  :root {
+    --verde: #0f6f4f;
+    --verde-osc: #0a4f38;
+    --rojo: #e31b23;
+    --crema: #f4f1ea;
+    --blanco: #ffffff;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: system-ui, sans-serif;
+    background: var(--crema);
+    color: #1a1a1a;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .wrap { max-width: 1000px; margin: 0 auto; padding: 20px; flex: 1; width: 100%; }
+  nav {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: var(--blanco);
+    padding: 10px;
+    border-radius: 50px;
+    margin-bottom: 25px;
+  }
+  nav a {
+    color: var(--verde-osc);
+    border: 2px solid var(--verde);
+    padding: 6px 14px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+  }
+  nav a.active, nav a:hover { background: var(--verde); color: var(--blanco); }
+  h1 { text-align: center; color: var(--verde); font-size: clamp(2rem, 5vw, 3rem); font-weight: 900; margin-bottom: 25px; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 18px; }
+  .card {
+    background: var(--blanco);
+    border-radius: 18px;
+    padding: 20px;
+    text-align: center;
+    border-bottom: 5px solid var(--verde);
+    box-shadow: 0 4px 12px rgba(0,0,0,0.04);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+  .card img { width: 130px; height: 130px; border-radius: 50%; object-fit: cover; border: 3px solid var(--verde); }
+  .card h3 { color: var(--rojo); font-size: 1.05rem; font-weight: 900; text-transform: uppercase; }
+  .card p { font-size: 0.95rem; line-height: 1.5; color: #444; }
+  footer { background: var(--verde-osc); color: var(--blanco); text-align: center; padding: 15px; font-weight: 700; margin-top: auto; }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <nav>
+    <a href="01-index.html">Inicio</a>
+    <a href="02-introduccion.html">Introducción</a>
+    <a href="03-fechas.html">Fechas</a>
+    <a href="04-datos.html">Datos Curiosos</a>
+    <a href="05-mitos.html">Mitos</a>
+    <a href="06-personajes.html" class="active">Personajes</a>
+    <a href="07-ninos-heroes.html">Niños Héroes</a>
+  </nav>
+
+  <h1>PERSONAJES DE LA INDEPENDENCIA</h1>
+
+  <div class="grid">
+    <div class="card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCsahOjh4-4ahw68xGkrUWyJ5QxNvctXzkqRnwP3VEUKzvD8V6DXGKUMA&s=10" alt="Miguel Hidalgo y Costilla">
+      <h3>MIGUEL HIDALGO Y COSTILLA</h3>
+      <p>Fue un sacerdote, intelectual y militar novohispano que pasó a la historia como el Padre de la Patria.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://www.gob.mx/cms/uploads/article/main_image/116219/WhatsApp_Image_2021-12-15_at_11.29.17.jpeg" alt="José María Morelos y Pavón">
+      <h3>JOSÉ MARÍA MORELOS Y PAVÓN</h3>
+      <p>Fue un sacerdote, militar y político novohispano que asumió el liderazgo del movimiento insurgente tras la muerte de Miguel Hidalgo.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ33S3w7tq9Ocs1sjtE5WEJuwwjsQPsOLZKnfSXjHQ9JUF6o0mQU6J97zFl&s=10" alt="Josefa Ortiz de Domínguez">
+      <h3>JOSEFA ORTIZ DE DOMÍNGUEZ</h3>
+      <p>Conocida históricamente como "La Corregidora", fue la heroína clave en la conspiración insurgente para avisar sobre el descubrimiento del movimiento.</p>
+    </div>
+
+    <div class="card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ0BdUW9mAdeRpePhE1vG9Lv3Bjh1aeIXEjhZiJIcgqhQYf88cubmtZIGeR&s=10" alt="Ignacio Allende">
+      <h3>IGNACIO ALLENDE</h3>
+      <p>Ignacio Allende y Unzaga fue un militar y heroico caudillo novohispano que, junto a Miguel Hidalgo, lideró la primera etapa de la guerra de Independencia de México.</p>
+    </div>
+  </div>
+</div>
+
+<footer>Esparza Martinez Leonardo. 0834. 5-J</footer>
+
+</body>
+</html>

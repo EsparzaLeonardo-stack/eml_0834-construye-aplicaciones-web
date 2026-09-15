@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mes Patrio | Niños Héroes</title>
+<style>
+  :root {
+    --verde: #0f6f4f;
+    --verde-osc: #0a4f38;
+    --blanco: #ffffff;
+  }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body {
+    font-family: system-ui, sans-serif;
+    background: var(--verde);
+    color: var(--blanco);
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+  }
+  .wrap { max-width: 1000px; margin: 0 auto; padding: 20px; flex: 1; width: 100%; }
+  nav {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: center;
+    background: var(--blanco);
+    padding: 10px;
+    border-radius: 50px;
+    margin-bottom: 25px;
+  }
+  nav a {
+    color: var(--verde-osc);
+    border: 2px solid var(--verde);
+    padding: 6px 14px;
+    border-radius: 20px;
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+  }
+  nav a.active, nav a:hover { background: var(--verde); color: var(--blanco); }
+  h1 { text-align: center; font-size: clamp(2rem, 5vw, 3rem); font-weight: 900; margin-bottom: 20px; }
+  .hero-img { width: 100%; height: 220px; object-fit: cover; border-radius: 18px; margin-bottom: 20px; display: block; }
+  .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; }
+  .card {
+    background: rgba(255,255,255,0.12);
+    border: 1.5px solid rgba(255,255,255,0.25);
+    border-radius: 18px;
+    padding: 20px;
+  }
+  .card h3 { color: #ffeb3b; font-size: 1.05rem; font-weight: 900; margin-bottom: 8px; text-transform: uppercase; }
+  .card p { font-size: 0.95rem; line-height: 1.5; }
+  footer { background: var(--verde-osc); text-align: center; padding: 15px; font-weight: 700; margin-top: auto; }
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <nav>
+    <a href="01-index.html">Inicio</a>
+    <a href="02-introduccion.html">Introducción</a>
+    <a href="03-fechas.html">Fechas</a>
+    <a href="04-datos.html">Datos Curiosos</a>
+    <a href="05-mitos.html">Mitos</a>
+    <a href="06-personajes.html">Personajes</a>
+    <a href="07-ninos-heroes.html" class="active">Niños Héroes</a>
+  </nav>
+
+  <h1>LOS NIÑOS HÉROES</h1>
+
+  <img src="https://www.mexicodesconocido.com.mx/wp-content/uploads/2018/06/ninos-heroes.jpg" class="hero-img">
+
+  <div class="grid">
+    <div class="card">
+      <h3>JUAN DE LA BARRERA</h3>
+      <p>Teniente de 19 años originario de la Ciudad de México que construyó y defendió valientemente un reducto militar en las faldas del cerro, donde murió bajo el fuego de la artillería invasora.</p>
+    </div>
+
+    <div class="card">
+      <h3>JUAN ESCUTIA</h3>
+      <p>Joven nayarita de 20 años que, según la tradición mexicana, se envolvió en la bandera nacional y se lanzó desde lo alto del Castillo de Chapultepec para evitar que cayera en manos enemigas.</p>
+    </div>
+
+    <div class="card">
+      <h3>FRANCISCO MÁRQUEZ</h3>
+      <p>El cadete tapatío más joven del grupo con solo 13 años, quien desobedeció la orden de rendirse ante el enemigo, disparó su arma y fue acribillado en el ala este del edificio.</p>
+    </div>
+
+    <div class="card">
+      <h3>AGUSTÍN MELGAR</h3>
+      <p>Cadete chihuahuense de 18 años que defendió el mirador del Castillo cuerpo a cuerpo con su bayoneta hasta quedarse sin municiones, falleciendo al día siguiente por la gravedad de sus heridas.</p>
+    </div>
+
+    <div class="card">
+      <h3>FERNANDO MONTES DE OCA</h3>
+      <p>Cadete de 18 años nacido en Azcapotzalco que dio la vida defendiendo el interior del plantel, siendo alcanzado por las balas enemigas al intentar saltar por una ventana para replegarse.</p>
+    </div>
+
+    <div class="card">
+      <h3>VICENTE SUÁREZ</h3>
+      <p>Valiente poblano de 17 años que, en su posición de centinela en el mirador, se negó a abandonar su puesto y enfrentó con su fusil a los soldados estadounidenses hasta caer abatido.</p>
+    </div>
+  </div>
+</div>
+
+<footer>Esparza Martinez Leonardo. 0834. 5-J</footer>
+
+</body>
+</html>
