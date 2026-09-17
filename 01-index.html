@@ -1,10 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta charset="UTF-8"> <!-- Esto permite usar varios caracteres y simbolos de varios idiomas especificamente acentos y la ñ para el español -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+<!-- ajusta la pagina para que se pueda ver correctamente en un monitor o en celular (hice mucho en celular)  -->
 <title>Mes Patrio | Inicio</title>
-<style>
+<style> 
+/* esta parte define los colores o la paleta de colores de la pagina inicial */
   :root {
     --verde: #0f6f4f;
     --verde-osc: #0a4f38;
@@ -12,41 +14,42 @@
     --crema: #f4f1ea;
     --blanco: #ffffff;
   }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; } /* quitamos margenes */
+  /* Configuramos la fuente y altura del fondo osea de la pagina */
   body {
-    font-family: system-ui, sans-serif;
-    background: var(--crema);
-    color: #1a1a1a;
+    font-family: system-ui, sans-serif; /*Utiliza la tipografia determinada del sistema operativo*/
+    background: var(--crema); /* Color del fondo */
+    color: #1a1a1a; /* aplica color a la tipografia es un gris oscuro */
     min-height: 100vh;
     display: flex;
     flex-direction: column;
   }
-  .wrap { max-width: 1000px; margin: 0 auto; padding: 20px; flex: 1; width: 100%; }
-  nav {
+  .wrap { max-width: 1000px; margin: 0 auto; padding: 20px; flex: 1; width: 100%; } /* Centra la pagina */
+  nav { /* esta es la barra superior la de las opciones */
     display: flex;
-    gap: 8px;
+    gap: 8px; /* pone una separacion de 8 pixeles entre boton */
     flex-wrap: wrap;
-    justify-content: center;
-    background: var(--blanco);
-    padding: 10px;
-    border-radius: 50px;
-    margin-bottom: 25px;
+    justify-content: center; /* alinea al centro de la barra los botones */
+    background: var(--blanco); /* aplica color a la opcion (boton)*/
+    padding: 10px; /* pone un espacio de 10 pixeles entre los bordes de la barra y los botones*/
+    border-radius: 50px; /* redondea los bordes de la barra */
+    margin-bottom: 25px; /* separa la barra 25 pixeles del resto del contenido */
   }
-  nav a {
-    color: var(--verde-osc);
-    border: 2px solid var(--verde);
-    padding: 6px 14px;
-    border-radius: 20px;
-    text-decoration: none;
-    font-weight: 700;
-    font-size: 0.85rem;
-    text-transform: uppercase;
+  nav a { /* aqui se define el estilo visual de los botones */
+    color: var(--verde-osc); /* define el color del texto dentro de los botones */
+    border: 2px solid var(--verde); /* le pone borde a los botones de 2 pixeles con un color verde mas claro que el de las letras*/
+    padding: 6px 14px; /*aplica espacio interno entre el texto y los bordes de la pagina, 6 pixeles de arriba y de abajo y 14 pixeles a los lados*/
+    border-radius: 20px; /*redonde los bordes de los botones*/
+    text-decoration: none; /*quita el subrayado que traen los enlaces por defecto.*/
+    font-weight: 700; /*aplica grosor en la negrita*/
+    font-size: 0.85rem; /*reduce el tmañao del texto un 85% respecto al tamaño del documento*/
+    text-transform: uppercase; /*convierte todo el texto dle enlace en mayusculas*/
   }
   nav a.active, nav a:hover { background: var(--verde); color: var(--blanco); }
   .card {
     background: var(--blanco);
-    border-radius: 24px;
-    padding: 30px 20px;
+    border-radius: 24px;de+
+    padding: 30px 20px;                                 
     text-align: center;
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
   }
@@ -93,5 +96,5 @@
 
 <footer>Esparza Martinez Leonardo. 0834. 5-J</footer>
 
-</body>
-</html>
+</body> <! 
+</html> 
