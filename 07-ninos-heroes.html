@@ -1,16 +1,19 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es"> <!-- define el idioma de la pagina en español -->
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mes Patrio | Niños Héroes</title>
+<meta charset="UTF-8"> <!-- permite usar acentos y caracteres especiales como la ñ -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- ajusta la pantalla para que se vea bien en celulares y monitores -->
+<title>Mes Patrio | Niños Héroes</title> <!-- titulo que se muestra en la pestaña del navegador -->
 <style>
+  /* variables de colores representativos usadas en la pagina */
   :root {
     --verde: #0f6f4f;
     --verde-osc: #0a4f38;
     --blanco: #ffffff;
   }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; } /* reinicia los margenes y espacios por defecto */
+  
+  /* configuracion del fondo verde y estructura flexible de la pantalla */
   body {
     font-family: system-ui, sans-serif;
     background: var(--verde);
@@ -19,45 +22,64 @@
     display: flex;
     flex-direction: column;
   }
-  .wrap { max-width: 1000px; margin: 0 auto; padding: 20px; flex: 1; width: 100%; }
+  .wrap { max-width: 1000px; margin: 0 auto; padding: 20px; flex: 1; width: 100%; } /* contenedor principal centrado */
+  
+  /* estilo de la barra del menu superior */
   nav {
     display: flex;
-    gap: 8px;
+    gap: 8px; /* espacio entre botones */
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: center; /* alinea los botones al centro */
     background: var(--blanco);
     padding: 10px;
     border-radius: 50px;
     margin-bottom: 25px;
   }
+  /* diseno visual de los botones del menu */
   nav a {
     color: var(--verde-osc);
     border: 2px solid var(--verde);
     padding: 6px 14px;
     border-radius: 20px;
-    text-decoration: none;
+    text-decoration: none; /* quita el subrayado del texto */
     font-weight: 700;
     font-size: 0.85rem;
     text-transform: uppercase;
   }
+  /* cambio de apariencia al pasar el cursor o seleccionar un boton */
   nav a.active, nav a:hover { background: var(--verde); color: var(--blanco); }
+  
+  /* titulo principal centrado */
   h1 { text-align: center; font-size: clamp(2rem, 5vw, 3rem); font-weight: 900; margin-bottom: 20px; }
+  
+  /* ajusta la imagen principal ilustrativa de los ninos heroes */
   .hero-img { width: 100%; height: 220px; object-fit: cover; border-radius: 18px; margin-bottom: 20px; display: block; }
+  
+  /* rejilla adaptable para acomodar las tarjetas de los cadetes */
   .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; }
+  
+  /* tarjetas con fondo semi-transparente para resaltar sobre el verde */
   .card {
     background: rgba(255,255,255,0.12);
     border: 1.5px solid rgba(255,255,255,0.25);
     border-radius: 18px;
     padding: 20px;
   }
+  /* nombre del cadete en amarillo destacado y mayusculas */
   .card h3 { color: #ffeb3b; font-size: 1.05rem; font-weight: 900; margin-bottom: 8px; text-transform: uppercase; }
+  
+  /* texto explicativo de la hazana de cada cadete */
   .card p { font-size: 0.95rem; line-height: 1.5; }
+  
+  /* estilo del pie de pagina fijado al final */
   footer { background: var(--verde-osc); text-align: center; padding: 15px; font-weight: 700; margin-top: auto; }
 </style>
 </head>
 <body>
 
+<!-- contenedor general de la pagina -->
 <div class="wrap">
+  <!-- menu de navegacion principal -->
   <nav>
     <a href="01-index.html">Inicio</a>
     <a href="02-introduccion.html">Introducción</a>
@@ -65,39 +87,48 @@
     <a href="04-datos.html">Datos Curiosos</a>
     <a href="05-mitos.html">Mitos</a>
     <a href="06-personajes.html">Personajes</a>
-    <a href="07-ninos-heroes.html" class="active">Niños Héroes</a>
+    <a href="07-ninos-heroes.html" class="active">Niños Héroes</a> <!-- boton activo para la pagina actual -->
   </nav>
 
+  <!-- titulo principal de la seccion -->
   <h1>LOS NIÑOS HÉROES</h1>
 
+  <!-- imagen ilustrativa principal de la Batalla de Chapultepec -->
   <img src="https://www.mexicodesconocido.com.mx/wp-content/uploads/2018/06/ninos-heroes.jpg" class="hero-img">
 
+  <!-- rejilla que contiene las tarjetas de los 6 ninos heroes -->
   <div class="grid">
+    <!-- cadete 1: juan de la barrera -->
     <div class="card">
       <h3>JUAN DE LA BARRERA</h3>
       <p>Teniente de 19 años originario de la Ciudad de México que construyó y defendió valientemente un reducto militar en las faldas del cerro, donde murió bajo el fuego de la artillería invasora.</p>
     </div>
 
+    <!-- cadete 2: juan escutia -->
     <div class="card">
       <h3>JUAN ESCUTIA</h3>
       <p>Joven nayarita de 20 años que, según la tradición mexicana, se envolvió en la bandera nacional y se lanzó desde lo alto del Castillo de Chapultepec para evitar que cayera en manos enemigas.</p>
     </div>
 
+    <!-- cadete 3: francisco marquez -->
     <div class="card">
       <h3>FRANCISCO MÁRQUEZ</h3>
       <p>El cadete tapatío más joven del grupo con solo 13 años, quien desobedeció la orden de rendirse ante el enemigo, disparó su arma y fue acribillado en el ala este del edificio.</p>
     </div>
 
+    <!-- cadete 4: agustin melgar -->
     <div class="card">
       <h3>AGUSTÍN MELGAR</h3>
       <p>Cadete chihuahuense de 18 años que defendió el mirador del Castillo cuerpo a cuerpo con su bayoneta hasta quedarse sin municiones, falleciendo al día siguiente por la gravedad de sus heridas.</p>
     </div>
 
+    <!-- cadete 5: fernando montes de oca -->
     <div class="card">
       <h3>FERNANDO MONTES DE OCA</h3>
       <p>Cadete de 18 años nacido en Azcapotzalco que dio la vida defendiendo el interior del plantel, siendo alcanzado por las balas enemigas al intentar saltar por una ventana para replegarse.</p>
     </div>
 
+    <!-- cadete 6: vicente suarez -->
     <div class="card">
       <h3>VICENTE SUÁREZ</h3>
       <p>Valiente poblano de 17 años que, en su posición de centinela en el mirador, se negó a abandonar su puesto y enfrentó con su fusil a los soldados estadounidenses hasta caer abatido.</p>
@@ -105,6 +136,7 @@
   </div>
 </div>
 
+<!-- pie de pagina con informacion del alumno -->
 <footer>Esparza Martinez Leonardo. 0834. 5-J</footer>
 
 </body>
