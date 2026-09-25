@@ -1,53 +1,68 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es"> <!-- define el idioma de la pagina en español -->
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mes Patrio | Introducción</title>
+<meta charset="UTF-8"> <!-- permite usar acentos y caracteres especiales como la ñ -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- ajusta la pantalla para que se vea bien en celulares y monitores -->
+<title>Mes Patrio | Introducción</title> <!-- titulo que se muestra en la pestaña del navegador -->
 <style>
+  /* define los colores principales usados exclusivamente en esta seccion */
   :root {
     --verde: #0f6f4f;
     --verde-osc: #0a4f38;
     --blanco: #ffffff;
   }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; } /* reinicia los margenes y espacios por defecto */
+  
+  /* configura el fondo verde para toda la pantalla y la tipografia del sistema */
   body {
     font-family: system-ui, sans-serif;
-    background: var(--verde);
-    color: var(--blanco);
+    background: var(--verde); /* aplica el color verde de fondo */
+    color: var(--blanco); /* texto en blanco para resaltar con el fondo verde */
     min-height: 100vh;
     display: flex;
     flex-direction: column;
   }
-  .wrap { max-width: 1000px; margin: 0 auto; padding: 20px; flex: 1; width: 100%; }
+  .wrap { max-width: 1000px; margin: 0 auto; padding: 20px; flex: 1; width: 100%; } /* centra el contenido y limita el ancho a 1000px */
+  
+  /* barra del menu de opciones superior */
   nav {
     display: flex;
-    gap: 8px;
+    gap: 8px; /* espacio entre cada boton */
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: center; /* alinea los botones al centro */
     background: var(--blanco);
     padding: 10px;
-    border-radius: 50px;
+    border-radius: 50px; /* redondea la barra del menu */
     margin-bottom: 25px;
   }
+  /* estilo visual para los botones del menu */
   nav a {
     color: var(--verde-osc);
     border: 2px solid var(--verde);
     padding: 6px 14px;
     border-radius: 20px;
-    text-decoration: none;
+    text-decoration: none; /* quita el subrayado */
     font-weight: 700;
     font-size: 0.85rem;
-    text-transform: uppercase;
+    text-transform: uppercase; /* cambia el texto a mayusculas */
   }
+  /* cambia el estilo al pasar el cursor o al estar activo */
   nav a.active, nav a:hover { background: var(--verde); color: var(--blanco); }
+  
+  /* titulo grande centrado */
   h1 { text-align: center; font-size: clamp(2rem, 5vw, 3.5rem); font-weight: 900; margin-bottom: 25px; }
+  
+  /* cuadricula que acomoda la imagen y la tarjeta a los lados o uno sobre otro si es celular */
   .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 20px; align-items: center; }
+  
+  /* marco contenedor de la imagen con esquinas redondeadas */
   .img-box { border-radius: 20px; overflow: hidden; height: 320px; }
-  .img-box img { width: 100%; height: 100%; object-fit: cover; }
+  .img-box img { width: 100%; height: 100%; object-fit: cover; } /* ajusta la foto al marco sin distorsionarla */
+  
+  /* tarjeta con fondo semi-transparente para que resalte la explicacion sobre el fondo verde */
   .card {
-    background: rgba(255,255,255,0.15);
-    border: 2px solid rgba(255,255,255,0.3);
+    background: rgba(255,255,255,0.15); /* blanco semi-transparente */
+    border: 2px solid rgba(255,255,255,0.3); /* borde suave transparente */
     border-radius: 20px;
     padding: 30px;
     font-size: 1.2rem;
@@ -55,15 +70,18 @@
     font-weight: 700;
     text-transform: uppercase;
   }
+  /* estilo del pie de pagina al final de la pantalla */
   footer { background: var(--verde-osc); text-align: center; padding: 15px; font-weight: 700; margin-top: auto; }
 </style>
 </head>
 <body>
 
+<!-- contenedor general centrado -->
 <div class="wrap">
+  <!-- menu de navegacion entre las paginas -->
   <nav>
     <a href="01-index.html">Inicio</a>
-    <a href="02-introduccion.html" class="active">Introducción</a>
+    <a href="02-introduccion.html" class="active">Introducción</a> <!-- boton activo marcado para esta pagina -->
     <a href="03-fechas.html">Fechas</a>
     <a href="04-datos.html">Datos Curiosos</a>
     <a href="05-mitos.html">Mitos</a>
@@ -71,18 +89,24 @@
     <a href="07-ninos-heroes.html">Niños Héroes</a>
   </nav>
 
+  <!-- titulo principal de la pagina -->
   <h1>INTRODUCTION</h1>
 
+  <!-- estructura en grid para mostrar foto y texto lado a lado -->
   <div class="grid">
+    <!-- contenedor de la foto de la Catedral -->
     <div class="img-box">
       <img src="https://images.unsplash.com/photo-1512813195386-6cf811ad3542?auto=format&fit=crop&w=800&q=80" alt="Catedral de México">
     </div>
+    
+    <!-- tarjeta informativa sobre el mes patrio -->
     <div class="card">
       SEPTIEMBRE ES CONOCIDO EN MÉXICO COMO EL MES DE LA PATRIA PORQUE SE CONMEMORA EL ANIVERSARIO DE LA INDEPENDENCIA NACIONAL.
     </div>
   </div>
 </div>
 
+<!-- pie de pagina con los datos del alumno -->
 <footer>Esparza Martinez Leonardo. 0834. 5-J</footer>
 
 </body>
