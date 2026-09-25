@@ -1,10 +1,10 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es"> <!-- define el idioma de la pagina en español -->
 <head>
 <meta charset="UTF-8"> <!-- Esto permite usar varios caracteres y simbolos de varios idiomas especificamente acentos y la ñ para el español -->
 <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
 <!-- ajusta la pagina para que se pueda ver correctamente en un monitor o en celular (hice mucho en celular)  -->
-<title>Mes Patrio | Inicio</title>
+<title>Mes Patrio | Inicio</title> <!-- titulo que aparece en la pestaña del navegador -->
 <style> 
 /* esta parte define los colores o la paleta de colores de la pagina inicial */
   :root {
@@ -45,18 +45,30 @@
     font-size: 0.85rem; /*reduce el tmañao del texto un 85% respecto al tamaño del documento*/
     text-transform: uppercase; /*convierte todo el texto dle enlace en mayusculas*/
   }
+  /* cambia el fondo a verde y letras a blanco al pasar el mouse o al estar seleccionado el boton */
   nav a.active, nav a:hover { background: var(--verde); color: var(--blanco); }
+  
+  /* estilo de la tarjeta contenedora central con fondo blanco, bordes redondeados y sombra suave */
   .card {
     background: var(--blanco);
     border-radius: 24px;
     padding: 30px 20px;                                 
-    text-align: center;
-    box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+    text-align: center; /* centra todo el texto dentro de la tarjeta */
+    box-shadow: 0 4px 15px rgba(0,0,0,0.05); /* le da un efecto de sombra ligera para levantar el cuadro */
   }
+  /* estilo para el subtitulo superior en rojo con letras mas gruesas y separadas */
   .sub { color: var(--rojo); font-weight: 900; letter-spacing: 2px; }
+  
+  /* titulo gigante principal que escala de tamaño segun el tamaño de la pantalla */
   h1 { color: var(--verde); font-size: clamp(3rem, 8vw, 5.5rem); font-weight: 900; margin: 5px 0 15px; }
+  
+  /* contenedor de la imagen para centrarla y cortarla con bordes redondeados */
   .img-box { max-width: 650px; margin: 0 auto 20px; border-radius: 20px; overflow: hidden; }
+  
+  /* ajusta la imagen para que llene el contenedor sin deformarse */
   .img-box img { width: 100%; height: 300px; object-fit: cover; display: block; }
+  
+  /* cuadro de descripcion verde abajo de la foto con texto blanco */
   .desc {
     background: var(--verde);
     color: var(--blanco);
@@ -66,14 +78,17 @@
     margin: 0 auto;
     font-weight: 600;
   }
+  /* estilo del pie de pagina que lo manda al fondo de la pantalla con letras blancas sobre verde oscuro */
   footer { background: var(--verde-osc); color: var(--blanco); text-align: center; padding: 15px; font-weight: 700; margin-top: auto; }
 </style>
 </head>
 <body>
 
+<!-- contenedor general que envuelve la estructura central -->
 <div class="wrap">
+  <!-- barra de navegacion con los enlaces a las diferentes secciones del sitio web -->
   <nav>
-    <a href="01-index.html" class="active">Inicio</a>
+    <a href="01-index.html" class="active">Inicio</a> <!-- boton activo marcado para la pagina actual -->
     <a href="02-introduccion.html">Introducción</a>
     <a href="03-fechas.html">Fechas</a>
     <a href="04-datos.html">Datos Curiosos</a>
@@ -82,19 +97,25 @@
     <a href="07-ninos-heroes.html">Niños Héroes</a>
   </nav>
 
+  <!-- tarjeta principal donde viene todo el contenido representativo de inicio -->
   <div class="card">
-    <div class="sub">SEPTIEMBRE MES PATRIO</div>
-    <h1>MÉXICO</h1>
+    <div class="sub">SEPTIEMBRE MES PATRIO</div> <!-- texto corto decorativo encima del titulo principal -->
+    <h1>MÉXICO</h1> <!-- titulo principal del sitio -->
+    
+    <!-- cuadro con la foto representativa de la cultura mexicana -->
     <div class="img-box">
       <img src="https://images.unsplash.com/photo-1518638150340-f706e86654de?auto=format&fit=crop&w=1000&q=80" alt="Chichén Itzá">
     </div>
+    
+    <!-- mensaje o texto descriptivo breve -->
     <div class="desc">
       Mexico y sus fiestas patrias.
     </div>
   </div>
 </div>
 
+<!-- pie de pagina con los datos del alumno -->
 <footer>Esparza Martinez Leonardo. 0834. 5-J</footer>
 
 </body> 
-</html> 
+</html>
