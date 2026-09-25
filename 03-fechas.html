@@ -1,17 +1,20 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es"> <!-- define el idioma de la pagina en español -->
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mes Patrio | Fechas</title>
+<meta charset="UTF-8"> <!-- permite usar acentos y caracteres especiales como la ñ -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- ajusta la pantalla para que se vea bien en celulares y monitores -->
+<title>Mes Patrio | Fechas</title> <!-- titulo que se muestra en la pestaña del navegador -->
 <style>
+  /* variables de colores representativos que se usaran en toda la pagina */
   :root {
     --verde: #0f6f4f;
     --verde-osc: #0a4f38;
     --rojo: #e31b23;
     --blanco: #ffffff;
   }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; } /* quitamos margenes y rellenos por defecto */
+  
+  /* configuracion del fondo verde y estructura flexible de la pantalla */
   body {
     font-family: system-ui, sans-serif;
     background: var(--verde);
@@ -20,59 +23,88 @@
     display: flex;
     flex-direction: column;
   }
-  .wrap { max-width: 1000px; margin: 0 auto; padding: 20px; flex: 1; width: 100%; }
+  .wrap { max-width: 1000px; margin: 0 auto; padding: 20px; flex: 1; width: 100%; } /* contenedor centrado para limitar el ancho */
+  
+  /* estilo de la barra del menu superior */
   nav {
     display: flex;
-    gap: 8px;
+    gap: 8px; /* espacio entre botones */
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: center; /* alinea los botones al centro */
     background: var(--blanco);
     padding: 10px;
     border-radius: 50px;
     margin-bottom: 25px;
   }
+  /* diseno de los botones del menu de navegacion */
   nav a {
     color: var(--verde-osc);
     border: 2px solid var(--verde);
     padding: 6px 14px;
     border-radius: 20px;
-    text-decoration: none;
+    text-decoration: none; /* quita el subrayado de los enlaces */
     font-weight: 700;
     font-size: 0.85rem;
     text-transform: uppercase;
   }
+  /* efecto visual al pasar el cursor o seleccionar un boton */
   nav a.active, nav a:hover { background: var(--verde); color: var(--blanco); }
+  
+  /* estilo del titulo principal centrado */
   h1 { text-align: center; font-size: clamp(2rem, 5vw, 3rem); font-weight: 900; margin-bottom: 20px; }
+  
+  /* ajusta la imagen principal de la bandera para que ocupe todo el ancho */
   .hero-img { width: 100%; height: 220px; object-fit: cover; border-radius: 20px; margin-bottom: 20px; display: block; }
+  
+  /* caja blanca contenedora con esquinas redondeadas para la tabla */
   .table-box { background: var(--blanco); color: #1a1a1a; border-radius: 20px; padding: 20px; overflow-x: auto; }
+  
+  /* hace que la tabla ocupe todo el ancho disponible */
   table { width: 100%; border-collapse: collapse; }
+  
+  /* espaciado interno y bordes inferiores para separar las filas */
   th, td { padding: 14px; text-align: left; border-bottom: 1px solid #ddd; }
+  
+  /* encabezados de la tabla con fondo verde y letras blancas */
   th { background: var(--verde); color: var(--blanco); font-weight: 800; text-transform: uppercase; }
+  
+  /* redondea las esquinas superiores izquierda y derecha de la cabecera de la tabla */
   th:first-child { border-radius: 10px 0 0 10px; }
   th:last-child { border-radius: 0 10px 10px 0; }
+  
+  /* resalta los nombres de los acontecimientos en color rojo y mayusculas */
   td strong { color: var(--rojo); text-transform: uppercase; }
+  
+  /* estilo del pie de pagina fijo en el fondo */
   footer { background: var(--verde-osc); text-align: center; padding: 15px; font-weight: 700; margin-top: auto; }
 </style>
 </head>
 <body>
 
+<!-- contenedor general de la pagina -->
 <div class="wrap">
+  <!-- barra de navegacion principal -->
   <nav>
     <a href="01-index.html">Inicio</a>
     <a href="02-introduccion.html">Introducción</a>
-    <a href="03-fechas.html" class="active">Fechas</a>
+    <a href="03-fechas.html" class="active">Fechas</a> <!-- boton activo marcado para la pagina actual -->
     <a href="04-datos.html">Datos Curiosos</a>
     <a href="05-mitos.html">Mitos</a>
     <a href="06-personajes.html">Personajes</a>
     <a href="07-ninos-heroes.html">Niños Héroes</a>
   </nav>
 
+  <!-- titulo de la seccion -->
   <h1>FECHAS IMPORTANTES</h1>
 
+  <!-- imagen ilustrativa principal de la bandera -->
   <img src="https://images.unsplash.com/photo-1585464231875-d9ef1f5ad396?auto=format&fit=crop&w=1000&q=80" alt="Bandera de México" class="hero-img">
 
+  <!-- contenedor para la tabla de eventos historicos -->
   <div class="table-box">
+    <!-- tabla con el listado de fechas e historia -->
     <table>
+      <!-- encabezados de las columnas de la tabla -->
       <thead>
         <tr>
           <th>Acontecimiento</th>
@@ -80,6 +112,7 @@
           <th>¿Qué ocurrió?</th>
         </tr>
       </thead>
+      <!-- contenido con las fechas e informacion de la tabla -->
       <tbody>
         <tr>
           <td><strong>Grito de Dolores</strong></td>
@@ -101,6 +134,7 @@
   </div>
 </div>
 
+<!-- pie de pagina con informacion del alumno -->
 <footer>Esparza Martinez Leonardo. 0834. 5-J</footer>
 
 </body>
