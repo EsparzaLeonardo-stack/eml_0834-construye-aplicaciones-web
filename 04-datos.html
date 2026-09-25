@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es"> <!-- define el idioma de la pagina en español -->
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Mes Patrio | Datos Curiosos</title>
+<meta charset="UTF-8"> <!-- permite usar acentos y caracteres especiales como la ñ -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- ajusta la pantalla para que se vea bien en celulares y monitores -->
+<title>Mes Patrio | Datos Curiosos</title> <!-- titulo que se muestra en la pestaña del navegador -->
 <style>
+  /* define la paleta de colores globales para la pagina */
   :root {
     --verde: #0f6f4f;
     --verde-osc: #0a4f38;
@@ -12,7 +13,9 @@
     --crema: #f4f1ea;
     --blanco: #ffffff;
   }
-  * { box-sizing: border-box; margin: 0; padding: 0; }
+  * { box-sizing: border-box; margin: 0; padding: 0; } /* reinicia los margenes y rellenos por defecto */
+  
+  /* configuracion del cuerpo de la pagina, fondo crema y tipografia del sistema */
   body {
     font-family: system-ui, sans-serif;
     background: var(--crema);
@@ -21,80 +24,105 @@
     display: flex;
     flex-direction: column;
   }
-  .wrap { max-width: 1000px; margin: 0 auto; padding: 20px; flex: 1; width: 100%; }
+  .wrap { max-width: 1000px; margin: 0 auto; padding: 20px; flex: 1; width: 100%; } /* contenedor principal centrado para delimitar el ancho */
+  
+  /* estilo de la barra de navegacion superior */
   nav {
     display: flex;
-    gap: 8px;
+    gap: 8px; /* separacion entre cada boton */
     flex-wrap: wrap;
-    justify-content: center;
+    justify-content: center; /* alinea los botones al centro */
     background: var(--blanco);
     padding: 10px;
     border-radius: 50px;
     margin-bottom: 25px;
   }
+  /* diseno visual de los botones de la barra de navegacion */
   nav a {
     color: var(--verde-osc);
     border: 2px solid var(--verde);
     padding: 6px 14px;
     border-radius: 20px;
-    text-decoration: none;
+    text-decoration: none; /* quita el subrayado del texto */
     font-weight: 700;
     font-size: 0.85rem;
     text-transform: uppercase;
   }
+  /* cambia el color del boton al pasar el mouse o seleccionarlo */
   nav a.active, nav a:hover { background: var(--verde); color: var(--blanco); }
+  
+  /* estilo del titulo principal en color verde y centrado */
   h1 { text-align: center; color: var(--verde); font-size: clamp(2rem, 5vw, 3rem); font-weight: 900; margin-bottom: 25px; }
+  
+  /* rejilla adaptable que acomoda las tarjetas en columnas automaticas */
   .grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 18px; }
+  
+  /* estilo de las tarjetas blancas con borde superior rojo y sombra */
   .card {
     background: var(--blanco);
     border-radius: 18px;
     padding: 20px;
-    border-top: 5px solid var(--rojo);
+    border-top: 5px solid var(--rojo); /* linea decorativa roja arriba */
     box-shadow: 0 4px 12px rgba(0,0,0,0.04);
     display: flex;
     flex-direction: column;
     gap: 12px;
   }
+  /* ajusta las imagenes dentro de las tarjetas */
   .card img { width: 100%; height: 160px; object-fit: cover; border-radius: 12px; }
+  
+  /* formato del titulo de cada dato curioso en verde y mayusculas */
   .card h3 { color: var(--verde); font-size: 1rem; font-weight: 900; text-transform: uppercase; }
+  
+  /* formato del texto descriptivo en las tarjetas */
   .card p { font-size: 0.95rem; line-height: 1.5; color: #333; }
+  
+  /* estilo del pie de pagina fijado al final */
   footer { background: var(--verde-osc); color: var(--blanco); text-align: center; padding: 15px; font-weight: 700; margin-top: auto; }
 </style>
 </head>
 <body>
 
+<!-- contenedor general de la pagina -->
 <div class="wrap">
+  <!-- barra de menu de navegacion -->
   <nav>
     <a href="01-index.html">Inicio</a>
     <a href="02-introduccion.html">Introducción</a>
     <a href="03-fechas.html">Fechas</a>
-    <a href="04-datos.html" class="active">Datos Curiosos</a>
+    <a href="04-datos.html" class="active">Datos Curiosos</a> <!-- boton activo para la pagina actual -->
     <a href="05-mitos.html">Mitos</a>
     <a href="06-personajes.html">Personajes</a>
     <a href="07-ninos-heroes.html">Niños Héroes</a>
   </nav>
 
+  <!-- titulo de la seccion -->
   <h1>DATOS CURIOSOS</h1>
 
+  <!-- rejilla contenedora de las tarjetas de datos curiosos -->
   <div class="grid">
+    <!-- tarjeta 1: la campana de dolores -->
     <div class="card">
       <img src="https://www.mexicodesconocido.com.mx/wp-content/uploads/2025/08/campana-de-dolores-2.jpg">
       <h3>LA CAMPANA DE DOLORES VIAJÓ A LA CIUDAD DE MÉXICO</h3>
       <p>La campana que Hidalgo hizo sonar en Guanajuato fue trasladada en 1896 al Palacio Nacional en el Zócalo capitalino. Desde entonces, el presidente en turno la hace repicar cada 15 de septiembre.</p>
     </div>
 
+    <!-- tarjeta 2: chiles en nogada -->
     <div class="card">
       <img src="https://www.aceitesdeolivadeespana.com/wp-content/uploads/2019/05/receta_de_chiles_en_nogada.jpeg">
       <h3>EL ORIGEN PATRIÓTICO DE LOS CHILES EN NOGADA</h3>
       <p>Según la leyenda popular, este platillo típico de septiembre fue creado por las monjas agustinas del Convento de Santa Mónica en Puebla para celebrar el cumpleaños de Agustín de Iturbide y la firma de los Tratados de Córdoba en 1821. Sus ingredientes reflejan los colores del Ejército Trigarante: verde (poblano/perejil), blanco (nogada) y rojo (granada).</p>
     </div>
 
+    <!-- tarjeta 3: vicente guerrero y el abrazo -->
     <div class="card">
       <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvXe2HTk86dW4RSKToGwqs0Fj_xHh5Zr1FiTHMI5VdY2nfrQ8xSkOmoF4&s=10">
       <h3>VICENTE GUERRERO Y EL ABRAZO HISTÓRICO</h3>
       <p>La consumación de la Independencia se logró mediante la alianza de dos enemigos acérrimos: el insurgente Vicente Guerrero y el realista Agustín de Iturbide, marcada simbólicamente con el "Abrazo de Acatempan" en febrero de 1821 antes de la entrada triunfal del Ejército Trigarante en septiembre.</p>
     </div>
 
+    <!-- tarjeta 4: hora del grito -->
     <div class="card">
       <img src="https://i0.wp.com/www.historia.com/magazine/wp-content/uploads/sites/2/2016/09/el-grito-de-dolores.jpg?ssl=1">
       <h3>EL "GRITO" NO OCURRIÓ EXACTAMENTE A MEDIANOCHE</h3>
@@ -103,6 +131,7 @@
   </div>
 </div>
 
+<!-- pie de pagina con los datos del alumno -->
 <footer>Esparza Martinez Leonardo. 0834. 5-J</footer>
 
 </body>
